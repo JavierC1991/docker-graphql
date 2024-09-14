@@ -28,12 +28,12 @@ jobs:
         echo "Fin del login"
 
     - name: Build Docker Image
-      run:
+      run: |
         docker build -t dockerjaviercm1991/docker-graphql:0.0.2 .
         docker build -t dockerjaviercm1991/docker-graphql:latest .
         
     - name: Push Docker Image
-      run:
+      run: |
         docker push dockerjaviercm1991/docker-graphql:0.0.2
         docker push dockerjaviercm1991/docker-graphql:latest
         
